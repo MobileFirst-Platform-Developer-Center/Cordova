@@ -1,6 +1,0 @@
-framework module IBMMobileFirstPlatformFoundationHybrid {
-  umbrella header "IBMMobileFirstPlatformFoundationHybrid.h"
-
-  export *
-  module * { export * }
-}
