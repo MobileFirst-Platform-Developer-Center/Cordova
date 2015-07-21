@@ -1,0 +1,22 @@
+{
+  "name": "worklight-cordova-hook",
+  "version": "0.1.0",
+  "description": "Worklight Plugin Hook for Apache Cordova",
+  "main": "worklightHook.js",
+  "dependencies": {
+    "elementtree": "0.1.6",
+    "shelljs": "0.3.0",
+    "plist": "1.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "preinstall" : "npm install ../../../../../../../CLI/strings",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "worklight",
+    "cordova"
+  ],
+  "author": "IBM",
+  "license": "IBM"
+}

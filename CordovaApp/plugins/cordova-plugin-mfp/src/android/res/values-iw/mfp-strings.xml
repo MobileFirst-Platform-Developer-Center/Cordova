@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  -->
+<resources>
+  <string name="app_name">${gadgetDisplayName}</string>  
+  <string name="push_notification_title">${gadgetDisplayName}</string>
+  
+  <!-- General purpose strings -->
+  <string name="error">שגיאה</string>
+  <string name="close">סגירה</string>
+  <string name="cancel">ביטול</string>
+  
+  <!--  Settings Screen strings -->
+  <string name="worklightSettingsTitle">הגדרות Worklight </string>
+  <string name="summaryWLServerUrl">שינוי URL השרת:: http[s]://domain or IP address[:port][/context root]‎ </string>
+  <string name="titleWLServerUrl">URL שרת </string>
+  <string name="networkSettingsTitleWLServerUrl">הגדרות רשת </string>
+  <string name="OKTitleWLServerUrl">אישור</string>
+  <string name="titleInvalidWLServerUrl">URL לא חוקי</string>
+  <string name="errorInvalidWLServerUrl">‎%1$s‎ אינו URL חוקי.‏ מבנה חוקי הוא http[s]://domain or IP address[:port][/context root]‎ </string>
+  <string name="serverAddress">כתובת שרת </string>
+  <string name="changeServerAddress">שינוי URL שרת</string>
+  
+  <!--  Settings Screen: Web Resources category -->
+  <string name="wlWebResourcesCategory">משאבי רשת</string>
+  <string name="wlAppIdTitle">זיהוי יישום </string>
+  <string name="wlAppVersionTitle">גרסת יישום</string>
+  <string name="downloadingWebResourcesMessage">הורדת משאבי היישום (התקדמות בקילותבים) </string>
+  
+  <!-- Direct Update -->
+  <string name="directUpdateDownloadingMessage">הורדת עדכון היישום (התקדמות בקילותבים)</string>
+  <string name="kb">%1$d/%2$d kb</string> 
+  
+  <!-- Worklight initialization errors -->
+  <string name="worklightInitInternalError">היישום נתקל בשגיאה פנימית. התקינו את היישום מחדש ונסו שוב. </string>
+  <string name="worklightInitNotEnoughSpace">התקנת היישום נכשלה מפני שאין מספיק שטח אחסון זמין. פנו %1$s MB ושגרו את היישום שוב </string>   
+</resources>

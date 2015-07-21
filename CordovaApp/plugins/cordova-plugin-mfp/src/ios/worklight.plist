@@ -1,0 +1,24 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- 
+   File to be replace by mfp push command line
+-->
+<plist version="1.0">
+<dict>
+	<key>protocol</key> 
+	<string>http</string>
+	<key>host</key>
+	<string>129.41.132.163</string>
+	<key>port</key>
+	<string>10080</string>
+	<key>wlServerContext</key>
+	<string>/MFProject/</string>
+	<key>application id</key>
+	<string>MFPBank</string>
+	<key>application version</key>
+	<string>1.0</string>
+	<key>platformVersion</key>
+	<string>7.1.0.0</string>
+</dict>
+</plist>

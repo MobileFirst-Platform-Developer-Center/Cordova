@@ -1,0 +1,57 @@
+{
+  "name": "worklight-cordova-hook",
+  "version": "0.1.0",
+  "dependencies": {
+    "elementtree": {
+      "version": "0.1.6",
+      "from": "elementtree@0.1.6",
+      "resolved": "https://registry.npmjs.org/elementtree/-/elementtree-0.1.6.tgz",
+      "dependencies": {
+        "sax": {
+          "version": "0.3.5",
+          "from": "sax@0.3.5",
+          "resolved": "https://registry.npmjs.org/sax/-/sax-0.3.5.tgz"
+        }
+      }
+    },
+    "plist": {
+      "version": "1.1.0",
+      "from": "plist@1.1.0",
+      "resolved": "https://registry.npmjs.org/plist/-/plist-1.1.0.tgz",
+      "dependencies": {
+        "base64-js": {
+          "version": "0.0.6",
+          "from": "base64-js@0.0.6",
+          "resolved": "https://registry.npmjs.org/base64-js/-/base64-js-0.0.6.tgz"
+        },
+        "xmlbuilder": {
+          "version": "2.2.1",
+          "from": "xmlbuilder@2.2.1",
+          "resolved": "https://registry.npmjs.org/xmlbuilder/-/xmlbuilder-2.2.1.tgz",
+          "dependencies": {
+            "lodash-node": {
+              "version": "2.4.1",
+              "from": "lodash-node@~2.4.1",
+              "resolved": "https://registry.npmjs.org/lodash-node/-/lodash-node-2.4.1.tgz"
+            }
+          }
+        },
+        "xmldom": {
+          "version": "0.1.19",
+          "from": "xmldom@0.1.x",
+          "resolved": "https://registry.npmjs.org/xmldom/-/xmldom-0.1.19.tgz"
+        },
+        "util-deprecate": {
+          "version": "1.0.0",
+          "from": "util-deprecate@1.0.0",
+          "resolved": "https://registry.npmjs.org/util-deprecate/-/util-deprecate-1.0.0.tgz"
+        }
+      }
+    },
+    "shelljs": {
+      "version": "0.3.0",
+      "from": "shelljs@0.3.0",
+      "resolved": "https://registry.npmjs.org/shelljs/-/shelljs-0.3.0.tgz"
+    }
+  }
+}

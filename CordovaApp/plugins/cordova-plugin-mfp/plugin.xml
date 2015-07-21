@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Licensed Materials - Property of IBM
+			 5725-I43 (C) Copyright IBM Corp. 2015. All Rights Reserved.
+			 US Government Users Restricted Rights - Use, duplication or
+       disclosure restricted by GSA ADP Schedule Contract with IBM Corp. 
+ -->
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+  xmlns:rim="http://www.blackberry.com/ns/widgets"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  id="cordova-plugin-mfp"
+  version="7.1.0">
+  <name>IBM MobileFirst Platform Foundation</name>
+  <description>IBM MobileFirst Platform Foundation Cordova Plugin</description>
+  <license>IBM</license>
+  <keywords>cordova,ibm,worklight,mobilefirst,mfp</keywords>
+  <repo>https://www.ibm.com/mobilefirst</repo>
+  <issue>https://www.ibm.com/mobilefirst</issue>
+  
+  <engines>
+    <engine name="cordova-android" version=">=3.6.4 <4" />
+    <engine name="cordova-ios" version=">=3.7.0 <4" />
+    <engine name="cordova-plugman" version=">=5.0.0" />
+  </engines>
+
+  <hook type="before_prepare" src="hooks/worklightHook.js" />
+  <hook type="after_prepare" src="hooks/worklightHook.js" />
+  <hook type="before_plugin_uninstall" src="hooks/worklightHook.js" />
+  <hook type="after_plugin_install" src="hooks/afterPluginInstall.js" />
+
+  <dependency id="org.apache.cordova.device" />
+  <dependency id="org.apache.cordova.dialogs" />
+  <dependency id="org.apache.cordova.geolocation" />
+  <dependency id="org.apache.cordova.globalization" />
+  <dependency id="org.apache.cordova.inappbrowser" />
+  <dependency id="org.apache.cordova.network-information" />
+  
+  
+  <platform name="android">
+
+    <js-module src="bootstrap.js" name="mfp">
+      <runs/>
+    </js-module>
+    
+    <asset src="www/worklight" target="worklight" />
+  
+    <asset src="src/android/assets/www/skinLoader.html" target="skinLoader.html" />
+    <asset src="src/android/assets/www/worklight" target="worklight" />
+
+    <config-file target="config.xml" parent="/*">
+        <feature name="WLInitializationPlugin">
+            <param name="android-package" value="com.worklight.androidgap.plugin.WLInitializationPlugin" />
+            <param name="onload" value="true" />
+        </feature>
+        <!-- Due to bug in cordova next feature must set "onload" to false -->
+       <feature name="UserAuth">
+            <param name="android-package" value="com.worklight.androidgap.plugin.UserAuthPlugin" />
+            <param name="onload" value="false" />
+        </feature>
+        <feature name="LoggerPlugin">
+            <param name="android-package" value="com.worklight.androidgap.plugin.LoggerPlugin" />
+        </feature>
+        <feature name="WLApp">
+            <param name="android-package" value="com.worklight.androidgap.plugin.WLApp" />
+        </feature>
+        <feature name="NativePage">
+            <param name="android-package" value="com.worklight.androidgap.plugin.NativePage" />
+        </feature>
+        <feature name="NativeBusyIndicator">
+            <param name="android-package" value="com.worklight.androidgap.plugin.BusyIndicator" />
+        </feature>
+        <feature name="SecurityPlugin">
+            <param name="android-package" value="com.worklight.androidgap.plugin.SecurityPlugin" />
+        </feature>
+        <feature name="StoragePlugin">
+            <param name="android-package" value="com.worklight.androidgap.plugin.StoragePlugin" />
+        </feature>
+        <feature name="Push">
+            <param name="android-package" value="com.worklight.androidgap.plugin.Push" />
+        </feature>
+        <feature name="WebResourcesDownloader">
+            <param name="android-package" value="com.worklight.androidgap.plugin.WebResourcesDownloaderPlugin" />
+        </feature>
+        <feature name="NetworkDetector">
+            <param name="android-package" value="com.worklight.androidgap.plugin.NetworkDetector" />
+        </feature>
+        <feature name="DeviceAuth">
+            <param name="android-package" value="com.worklight.androidgap.plugin.DeviceAuthPlugin" />
+        </feature>
+        <feature name="WifiPlugin">
+            <param name="android-package" value="com.worklight.androidgap.plugin.WifiPlugin" />
+        </feature>
+        <feature name="WLGeolocationPlugin">
+            <param name="android-package" value="com.worklight.androidgap.plugin.WLGeolocationPlugin" />
+        </feature>
+        <feature name="ForegroundBinderPlugin">
+            <param name="android-package" value="com.worklight.androidgap.plugin.ForegroundBinderPlugin" />
+        </feature>
+        <feature name="FIPSHttpPlugin">
+            <param name="android-package" value="com.worklight.androidgap.plugin.FIPSHttpPlugin" />
+        </feature>
+        <feature name="WLCustomDialog">
+            <param name="android-package" value="com.worklight.androidgap.plugin.WLCustomDialog" />
+        </feature>
+        <feature name="NetworkStatus">
+            <param name="android-package" value="com.worklight.androidgap.plugin.WLNetworkManager" />
+        </feature>
+        <feature name="WLSplashScreen">
+            <param name="android-package" value="com.worklight.androidgap.plugin.WLSplashScreenPlugin" />
+        </feature>
+		    <feature name="WLAuthorizationManagerPlugin">
+        	<param name="android-package" value="com.worklight.androidgap.plugin.WLAuthorizationManagerPlugin" />
+    	  </feature>
+        <feature name="WLDirectUpdatePlugin">
+            <param name="android-package" value="com.worklight.androidgap.plugin.WLDirectUpdatePlugin" />
+        </feature>
+         <feature name="WLNativeXHRPlugin">
+            <param name="android-package" value="com.worklight.androidgap.plugin.WLNativeXHRPlugin" />
+        </feature>
+        <feature name="WLActionSenderPlugin">
+            <param name="android-package" value="com.worklight.androidgap.plugin.WLActionSenderPlugin" />
+        </feature>
+        <feature name="WLTrusteer">
+            <param name="android-package" value="com.worklight.androidgap.plugin.WLTrusteerPlugin" />
+        </feature>
+    </config-file>
+
+    <config-file target="AndroidManifest.xml" parent="/manifest">
+        <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    </config-file>
+
+    <lib-file src="src/android/libs/android-async-http.jar" />
+    <lib-file src="src/android/libs/bcprov.jar" />
+    <lib-file src="src/android/libs/commons-codec.jar" />
+    <lib-file src="src/android/libs/guava.jar" />
+    <lib-file src="src/android/libs/jackson-core-asl.jar" />
+    <lib-file src="src/android/libs/jackson-mapper-asl.jar" />
+    <lib-file src="src/android/libs/worklight-android.jar" />
+    
+    <!-- featurelibs/ contains libcrypto shared by fips and jsonstore, have it as common-->
+    <resource-file src="src/android/assets/featurelibs/armeabi/libcrypto.so.1.0.0.zip" target="assets/featurelibs/armeabi/libcrypto.so.1.0.0.zip" />
+    <resource-file src="src/android/assets/featurelibs/armeabi-v7a/libcrypto.so.1.0.0.zip" target="assets/featurelibs/armeabi-v7a/libcrypto.so.1.0.0.zip" />
+    <resource-file src="src/android/assets/featurelibs/x86/libcrypto.so.1.0.0.zip" target="assets/featurelibs/x86/libcrypto.so.1.0.0.zip" />
+
+    <resource-file src="src/android/libs/armeabi/libauthjni.so" target="libs/armeabi/libauthjni.so" />
+    <resource-file src="src/android/libs/armeabi-v7a/libauthjni.so" target="libs/armeabi-v7a/libauthjni.so" />
+    <resource-file src="src/android/libs/mips/libauthjni.so" target="libs/mips/libauthjni.so" />
+    <resource-file src="src/android/libs/mips64/libauthjni.so" target="libs/mips64/libauthjni.so" />
+    <resource-file src="src/android/libs/x86/libauthjni.so" target="libs/x86/libauthjni.so" />
+  
+    <resource-file src="src/android/res/drawable/splash.9.png" target="res/drawable/splash.9.png" />
+    <resource-file src="src/android/res/drawable/push.png.wluser" target="res/drawable/push.png" />
+    <resource-file src="src/android/res/drawable-hdpi/settings.png.wluser" target="res/drawable-hdpi/settings.png" />
+    <resource-file src="src/android/res/drawable-hdpi/push.png.wluser" target="res/drawable-hdpi/push.png" />
+    <resource-file src="src/android/res/drawable-hdpi-v11/push.png.wluser" target="res/drawable-hdpi-v11/push.png" />
+	  <resource-file src="src/android/res/drawable-ldpi/push.png.wluser" target="res/drawable-ldpi/push.png" />
+	  <resource-file src="src/android/res/drawable-ldpi/settings.png.wluser" target="res/drawable-ldpi/settings.png" />
+    <resource-file src="src/android/res/drawable-ldpi-v11/push.png.wluser" target="res/drawable-ldpi-v11/push.png" />
+	  <resource-file src="src/android/res/drawable-mdpi/push.png.wluser" target="res/drawable-mdpi/push.png" />
+	  <resource-file src="src/android/res/drawable-mdpi/settings.png.wluser" target="res/drawable-mdpi/settings.png" />
+    <resource-file src="src/android/res/drawable-mdpi-v11/push.png.wluser" target="res/drawable-mdpi-v11/push.png" />
+	  <resource-file src="src/android/res/drawable-xhdpi/push.png.wluser" target="res/drawable-xhdpi/push.png" />
+	  <resource-file src="src/android/res/drawable-xhdpi/settings.png.wluser" target="res/drawable-xhdpi/settings.png" />
+    <resource-file src="src/android/res/drawable-xhdpi-v11/push.png.wluser" target="res/drawable-xhdpi-v11/push.png" />
+
+    <resource-file src="src/android/res/values/mfp-strings.xml" target="res/values/mfp-strings.xml" />
+    <resource-file src="src/android/res/values-de/mfp-strings.xml" target="res/values-de/mfp-strings.xml" />
+    <resource-file src="src/android/res/values-es/mfp-strings.xml" target="res/values-es/mfp-strings.xml" />
+    <resource-file src="src/android/res/values-fr/mfp-strings.xml" target="res/values-fr/mfp-strings.xml" />
+    <resource-file src="src/android/res/values-he/mfp-strings.xml" target="res/values-he/mfp-strings.xml" />
+    <resource-file src="src/android/res/values-it/mfp-strings.xml" target="res/values-it/mfp-strings.xml" />
+    <resource-file src="src/android/res/values-iw/mfp-strings.xml" target="res/values-iw/mfp-strings.xml" />
+    <resource-file src="src/android/res/values-ja/mfp-strings.xml" target="res/values-ja/mfp-strings.xml" />
+    <resource-file src="src/android/res/values-ko/mfp-strings.xml" target="res/values-ko/mfp-strings.xml" />
+    <resource-file src="src/android/res/values-pt-rBR/mfp-strings.xml" target="res/values-pt-rBR/mfp-strings.xml" />
+    <resource-file src="src/android/res/values-ru/mfp-strings.xml" target="res/values-ru/mfp-strings.xml" />
+    <resource-file src="src/android/res/values-zh/mfp-strings.xml" target="res/values-zh/mfp-strings.xml" />
+    <resource-file src="src/android/res/values-zh-rTW/mfp-strings.xml" target="res/values-zh-rTW/mfp-strings.xml" />
+     
+     <resource-file src="src/android/.externalToolBuilders/" target=".externalToolBuilders/"/>
+     <resource-file src="src/android/.idea/" target=".idea/"/>
+     <resource-file src="src/android/.idea/.name" target=".idea/.name"/>
+     <resource-file src="src/android/.settings/" target=".settings/"/>
+     <resource-file src="src/android/.wldata" target=".wldata"/>
+     <resource-file src="src/android/proguard-project.txt" target="proguard-project.txt"/>
+     <resource-file src="src/android/native.iml" target="native.iml"/>
+
+  </platform>
+
+  <platform name="ios">
+    
+    <js-module src="bootstrap.js" name="mfp">
+      <runs/>
+    </js-module>
+    
+    <asset src="www/worklight" target="worklight" />
+
+    <asset src="src/ios/www/skinLoader.html" target="skinLoader.html" />
+    <asset src="src/ios/www/worklight" target="worklight" />
+
+    <!-- TODO: remove this, these files should be replace from worklight project -->
+    <config-file target="config.xml" parent="/*">
+      <!--worklight-->
+      <feature name="WLSplashScreen">
+        <param name="ios-package" value="WLSplashPlugin" />
+      </feature>
+      <feature name="LoggerPlugin">
+        <param name="ios-package" value="LoggerPlugin" />
+      </feature>
+      <feature name="DeviceAuth">
+        <param name="ios-package" value="DeviceAuthPlugin" />
+      </feature>
+      <feature name="UserAuth">
+        <param name="ios-package" value="UserAuthPlugin" />
+      </feature>
+      <feature name="WebResourcesDownloader">
+        <param name="ios-package" value="WebResourcesDownloader" />
+      </feature>
+      <feature name="WLDirectUpdatePlugin">
+        <param name="ios-package" value="WLDirectUpdatePlugin" />
+      </feature>
+      <feature name="WLNotification">
+        <param name="ios-package" value="WLNotification" />
+      </feature>
+      <feature name="WLApp">
+        <param name="ios-package" value="WLApp" />
+        <param name="onload" value="true" />
+      </feature>
+      <feature name="UIControls">
+        <param name="ios-package" value="UIControls" />
+      </feature>
+      <feature name="Push">
+        <param name="ios-package" value="Push" />
+        <param name="onload" value="true" />
+      </feature>
+      <feature name="NetworkDetector">
+        <param name="ios-package" value="NetworkDetector" />
+      </feature>
+      <feature name="NativePage">
+        <param name="ios-package" value="NativePage" />
+      </feature>
+      <feature name="SecurityPlugin">
+        <param name="ios-package" value="SecurityPlugin" />
+      </feature>
+      <feature name="StoragePlugin">
+        <param name="ios-package" value="StoragePlugin" />
+      </feature>
+      <feature name="FIPSHttpPlugin">
+        <param name="ios-package" value="FIPSHttpPlugin" />
+      </feature>
+      <feature name="Badge">
+        <param name="ios-package" value="Badge" />
+      </feature>
+      <feature name="NotificationEx">
+        <param name="ios-package" value="NotificationEx" />
+      </feature>
+      <feature name="WifiPlugin">
+        <param name="ios-package" value="WifiPlugin" />
+      </feature>
+      <feature name="CoreLocationGetLocationPlugin">
+        <param name="ios-package" value="CoreLocationGetLocationPlugin" />
+      </feature>
+      <feature name="CoreLocationWatchPlugin">
+        <param name="ios-package" value="CoreLocationWatchPlugin" />
+      </feature>
+      <feature name="SignificantChangeWatchPlugin">
+        <param name="ios-package" value="SignificantChangeWatchPlugin" />
+      </feature>
+      <feature name="SignificantChangeGetLocationPlugin">
+        <param name="ios-package" value="SignificantChangeGetLocationPlugin" />
+      </feature>
+      <feature name="WLNativeXHRPlugin">
+        <param name="ios-package" value="WLNativeXHRPlugin" />
+      </feature>
+      <feature name="WLActionSenderPlugin">
+        <param name="ios-package" value="WLActionSenderPlugin" />
+      </feature>
+      <feature name="WLTrusteer">
+        <param name="ios-package" value="WLTrusteerPlugin" />
+      </feature>
+      <feature name="WLAuthorizationManagerPlugin">
+          <param name="ios-package" value="WLAuthorizationManagerPlugin" />
+      </feature>
+    </config-file>
+
+    <framework src="src/ios/Frameworks/sqlcipher.framework" custom="true" />
+    <framework src="src/ios/Frameworks/IBMMobileFirstPlatformFoundationHybrid.framework" custom="true" />
+
+    <resource-file src="src/ios/Resources/Localizations.bundle" />
+
+    <header-file src="src/ios/MFPAppDelegate.h" />
+    <source-file src="src/ios/MFPAppDelegate.m" />
+
+    <resource-file src="src/ios/Entitlements-Debug.plist" />
+    <resource-file src="src/ios/Entitlements-Release.plist" />
+
+    <framework src="libstdc++.6.dylib" />
+    <framework src="libz.dylib" />
+    <framework src="libc++.dylib" />
+    <framework src="Security.framework" />
+    <framework src="CoreData.framework" />
+    <framework src="QuartzCore.framework" />
+
+    <!-- TODO: for now only way to register the file with XCode, it can be done later with xcode node module from hook -->
+    <resource-file src="src/ios/worklight.plist" />
+    <resource-file src="src/ios/VERSION" />
+
+  </platform>
+
+</plugin>

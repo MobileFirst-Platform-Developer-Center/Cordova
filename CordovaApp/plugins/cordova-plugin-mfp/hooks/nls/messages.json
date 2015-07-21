@@ -1,0 +1,21 @@
+{
+    "hookNotImpl" : "Hook not implemented yet for {0}",
+    "checksumMissing" : "checksum.js is missing, please run MFP Push.",
+    "filelistMissing" : "filelist is missing, please run MFP Push.",
+    "runningWlHook" : "Running IBM Worklight Hook: {0}",
+    "worklightPlistMissing" : "worklight.plist is missing. Please run MFP Push to create the file.",
+    "wlclientPropertiesMissing" : "wlclient.properties is missing. Please run MFP Push to create the file.",
+    "noPlatformsDetected" : "No platforms detected.",
+    "updatingClientProp" : "Updating client property file for {0}",
+    "buildingStaticAppProps" : "Building static_app_props.js for {0}",
+    "runningStaticAppProps" : "Running static_app_props.js",
+    "uninstallingWlHook" : "Uninstalling IBM Worklight Hook",
+    "restoringOrigMainAct" : "Restoring original Main Activity",
+    "origMainActRestoreSuccess" : "Original Main Activity {0} is restored",
+    "origMainActRestoreFailure" : "Could not restore original Main Activity. Please remove all references to Worklight from CordovaApp.java",
+    "error" : "ERROR: {0}",
+    "renameFileFail" : "Could not rename file {0}",
+    "pluginInstallComplete" : "Plugin install completed",
+    "manuallyMergeMainAct" : "Please manually merge MainActivity.original with CordovaApp.java in /platforms/android/src/[package_path]",
+    "manuallyMergeMainM" : "If you made changes to your main.m file, please manually merge main.m.bak with MFP's main.m"
+}
