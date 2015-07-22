@@ -38,7 +38,7 @@ IBM HAS NO OBLIGATION TO PROVIDE MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS OR 
         <splash density="xhdpi" src="res/screen/android/screen-xhdpi-portrait.png" />
         <update src="res/screen/android/splash.9.png" target="res/drawable/splash.9.png" />
         <preference name="loginDisplay" value="embedded" />
-        <preference name="wlNativeVersion" value="2365143094" />
+        <preference name="wlNativeVersion" value="948496966" />
     </platform>
     <platform name="ios">
         <icon height="57" src="res/icon/ios/icon.png" width="57" />
@@ -68,7 +68,7 @@ IBM HAS NO OBLIGATION TO PROVIDE MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS OR 
         <splash height="2208" src="res/screen/ios/Default-736h~iphone.png" width="1242" />
         <splash height="1242" src="res/screen/ios/Default-736h-Landscape~iphone.png" width="2208" />
         <preference name="loginDisplay" value="embedded" />
-        <preference name="wlNativeVersion" value="2698820256" />
+        <preference name="wlNativeVersion" value="1925452641" />
     </platform>
     <preference name="mfpServerUrl" value="http://127.0.0.1:10080" />
     <preference name="mfpServerRuntime" value="RSSAdapter" />

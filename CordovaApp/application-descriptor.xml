@@ -10,7 +10,7 @@
     IBM HAS NO OBLIGATION TO PROVIDE MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS OR MODIFICATIONS TO THE SAMPLE SOURCE CODE.
 
 -->
-<application id="com_ibm_CordovaApp" platformVersion="7.1.0.00.20150716-1434" xmlns="http://www.worklight.com/application-descriptor" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<application id="com_ibm_CordovaApp" platformVersion="7.1.0.00.20150720-0534" xmlns="http://www.worklight.com/application-descriptor" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <displayName>CordovaApp</displayName>
     <description>A sample Apache Cordova application that responds to the deviceready event.</description>
     <author>

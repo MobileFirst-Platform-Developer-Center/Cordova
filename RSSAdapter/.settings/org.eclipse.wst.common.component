@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="MFPServer">
-        <property name="context-root" value="MFPServer"/>
+    <wb-module deploy-name="RSSAdapter">
+        <property name="context-root" value="RSSAdapter"/>
     </wb-module>
 </project-modules>
