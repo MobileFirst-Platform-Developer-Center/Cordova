@@ -70,7 +70,7 @@ var app = {
     getPictureFail: function(){
         WL.Logger.error("getPicture failed");
     },
-    // Execute a request to RSSAdapter/getStories
+    // Execute a request to RSSAdapter/getFeed
     getRSSFeed: function(){
         var resourceRequest = new WLResourceRequest(
                     "/adapters/RSSAdapter/getFeed",
