@@ -36,8 +36,8 @@ limitations under the License.
 		</connectionPolicy>
 	</connectivity>
 
-	<procedure name="getStories"/>
+	<procedure name="getFeed"/>
 
-	<procedure name="getStoriesFiltered"/>
+	<procedure name="getFeedFiltered"/>
 
 </wl:adapter>
