@@ -15,7 +15,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 <wl:adapter name="RSSAdapter"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:wl="http://www.ibm.com/mfp/integration"
 	xmlns:http="http://www.ibm.com/mfp/integration/http">
 
@@ -23,21 +23,21 @@ limitations under the License.
 	<description>RSSAdapter</description>
 	<connectivity>
 		<connectionPolicy xsi:type="http:HTTPConnectionPolicyType">
-			<protocol>http</protocol>
-			<domain>rss.cnn.com</domain>
-			<port>80</port>	
+			<protocol>https</protocol>
+			<domain>developer.ibm.com</domain>
+			<port>443</port>
 			<connectionTimeoutInMilliseconds>30000</connectionTimeoutInMilliseconds>
 			<socketTimeoutInMilliseconds>30000</socketTimeoutInMilliseconds>
 			<maxConcurrentConnectionsPerNode>50</maxConcurrentConnectionsPerNode>
-			<!-- Following properties used by adapter's key manager for choosing specific certificate from key store  
-			<sslCertificateAlias></sslCertificateAlias> 
+			<!-- Following properties used by adapter's key manager for choosing specific certificate from key store
+			<sslCertificateAlias></sslCertificateAlias>
 			<sslCertificatePassword></sslCertificatePassword>
-			-->		
+			-->
 		</connectionPolicy>
 	</connectivity>
 
 	<procedure name="getStories"/>
 
 	<procedure name="getStoriesFiltered"/>
-	
+
 </wl:adapter>

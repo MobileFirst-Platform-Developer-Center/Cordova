@@ -73,13 +73,13 @@ var app = {
     // Execute a request to RSSAdapter/getStories
     getRSSFeed: function(){
         var resourceRequest = new WLResourceRequest(
-                    "/adapters/RSSAdapter/getStories",
+                    "/adapters/RSSAdapter/getFeed",
                     WLResourceRequest.GET);
         resourceRequest.send().then(app.getRSSFeedSuccess,app.getRSSFeedError);
     },
     // Receive the response from RSSAdapter
     getRSSFeedSuccess:function(response){
-        WL.Logger.info("getRSSFeedsSuccess");
+        WL.Logger.info("getRSSFeedSuccess");
         //The response.responseJSON contains the data received from the backend
         alert("Total RSS Feed items received:"+response.responseJSON.rss.channel.item.length);
     },
